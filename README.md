@@ -1,6 +1,4 @@
 # Trial-and-matcher-assitant
-# TrialMatch Helper — What it is and why it matters
-
 **TrialMatch Helper** is a *first-pass screening* tool for clinical trials. It asks a few simple profile questions (age, sex, city, condition, current meds, etc.), searches a curated set of **ClinicalTrials.gov** studies, and returns a short, explainable decision for each trial:
 
 **`Likely` | `Unlikely` | `Need-Info`**, plus a brief “why/why-not” and the official **NCT link** to verify details.
@@ -121,8 +119,7 @@ A ranked list of trials, each with decision + rationale + links, plus a concise 
 - **EXPOSE:** 8000
 - **CMD:** ["uvicorn", "trial_matcher_fastapi:app", "--reload","--host", "127.0.0.1", "--port", "8000"]
 
-## Environment Variables (referenced in code/.env)
-
+## Environment Variables 
 - `AIRFLOW_HOME`
 - `BRIGHT_API_KEY`
 - `LANGFUSE_PUBLIC_KEY`
@@ -132,18 +129,17 @@ A ranked list of trials, each with decision + rationale + links, plus a concise 
 - `QD_END_POINT`
 
 
-## FastAPI Routes (detected in code)
+## FastAPI Routes
 
 - `GET /match`
 - `POST /match`
 
-## Pydantic Models (detected)
-
+## Pydantic Models 
 **Match**
 - query: str
 - lang: str
 
-## Model/Tokenizer References (as seen in code)
+## Model/Tokenizer References 
 
 - `/app/Qwen3-4B`
 - `Qwen3-4B`
